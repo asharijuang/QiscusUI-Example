@@ -13,9 +13,38 @@
 		3DC2EB7B21A693BA0073225F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DC2EB7A21A693BA0073225F /* Assets.xcassets */; };
 		3DC2EB7E21A693BA0073225F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC2EB7C21A693BA0073225F /* LaunchScreen.storyboard */; };
 		3DC2EB8121A693BA0073225F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC2EB8021A693BA0073225F /* main.m */; };
+		3DC2EB9021A69DA50073225F /* MyChat.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC2EB8E21A69DA50073225F /* MyChat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DC2EB9321A69DA50073225F /* MyChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC2EB8C21A69DA50073225F /* MyChat.framework */; };
+		3DC2EB9421A69DA50073225F /* MyChat.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC2EB8C21A69DA50073225F /* MyChat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		856E82139A61C679224B7FFA /* Pods_Example_Objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A3E6EEC2939AFE86203A9A /* Pods_Example_Objc.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3DC2EB9121A69DA50073225F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DC2EB6621A693B40073225F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DC2EB8B21A69DA50073225F;
+			remoteInfo = MyChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3DC2EB9821A69DA50073225F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3DC2EB9421A69DA50073225F /* MyChat.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		06710A2DF43396F7993CA473 /* Pods-Example-Objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-Objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example-Objc/Pods-Example-Objc.debug.xcconfig"; sourceTree = "<group>"; };
 		3DC2EB6E21A693B40073225F /* Example-Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-Objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC2EB7121A693B40073225F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3DC2EB7221A693B40073225F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,10 +55,24 @@
 		3DC2EB7D21A693BA0073225F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DC2EB7F21A693BA0073225F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DC2EB8021A693BA0073225F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3DC2EB8C21A69DA50073225F /* MyChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DC2EB8E21A69DA50073225F /* MyChat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyChat.h; sourceTree = "<group>"; };
+		3DC2EB8F21A69DA50073225F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A9C7AB7DD6103724F977619 /* Pods-Example-Objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-Objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-Objc/Pods-Example-Objc.release.xcconfig"; sourceTree = "<group>"; };
+		90A3E6EEC2939AFE86203A9A /* Pods_Example_Objc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_Objc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3DC2EB6B21A693B40073225F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DC2EB9321A69DA50073225F /* MyChat.framework in Frameworks */,
+				856E82139A61C679224B7FFA /* Pods_Example_Objc.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DC2EB8921A69DA50073225F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,11 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2481A05B701931E35408E3EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90A3E6EEC2939AFE86203A9A /* Pods_Example_Objc.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3DC2EB6521A693B40073225F = {
 			isa = PBXGroup;
 			children = (
 				3DC2EB7021A693B40073225F /* Example-Objc */,
+				3DC2EB8D21A69DA50073225F /* MyChat */,
 				3DC2EB6F21A693B40073225F /* Products */,
+				57E8271949F1E4319906429C /* Pods */,
+				2481A05B701931E35408E3EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				3DC2EB6E21A693B40073225F /* Example-Objc.app */,
+				3DC2EB8C21A69DA50073225F /* MyChat.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,25 +126,76 @@
 			path = "Example-Objc";
 			sourceTree = "<group>";
 		};
+		3DC2EB8D21A69DA50073225F /* MyChat */ = {
+			isa = PBXGroup;
+			children = (
+				3DC2EB8E21A69DA50073225F /* MyChat.h */,
+				3DC2EB8F21A69DA50073225F /* Info.plist */,
+			);
+			path = MyChat;
+			sourceTree = "<group>";
+		};
+		57E8271949F1E4319906429C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				06710A2DF43396F7993CA473 /* Pods-Example-Objc.debug.xcconfig */,
+				7A9C7AB7DD6103724F977619 /* Pods-Example-Objc.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3DC2EB8721A69DA50073225F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DC2EB9021A69DA50073225F /* MyChat.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		3DC2EB6D21A693B40073225F /* Example-Objc */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DC2EB8421A693BA0073225F /* Build configuration list for PBXNativeTarget "Example-Objc" */;
 			buildPhases = (
+				3F69E7B1174074CAC642DED5 /* [CP] Check Pods Manifest.lock */,
 				3DC2EB6A21A693B40073225F /* Sources */,
 				3DC2EB6B21A693B40073225F /* Frameworks */,
 				3DC2EB6C21A693B40073225F /* Resources */,
+				9C339592ECD0BD78D78542B9 /* [CP] Embed Pods Frameworks */,
+				3DC2EB9821A69DA50073225F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3DC2EB9221A69DA50073225F /* PBXTargetDependency */,
 			);
 			name = "Example-Objc";
 			productName = "Example-Objc";
 			productReference = 3DC2EB6E21A693B40073225F /* Example-Objc.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3DC2EB8B21A69DA50073225F /* MyChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DC2EB9721A69DA50073225F /* Build configuration list for PBXNativeTarget "MyChat" */;
+			buildPhases = (
+				3DC2EB8721A69DA50073225F /* Headers */,
+				3DC2EB8821A69DA50073225F /* Sources */,
+				3DC2EB8921A69DA50073225F /* Frameworks */,
+				3DC2EB8A21A69DA50073225F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyChat;
+			productName = MyChat;
+			productReference = 3DC2EB8C21A69DA50073225F /* MyChat.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -101,6 +207,9 @@
 				ORGANIZATIONNAME = Qiscus;
 				TargetAttributes = {
 					3DC2EB6D21A693B40073225F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					3DC2EB8B21A69DA50073225F = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -119,6 +228,7 @@
 			projectRoot = "";
 			targets = (
 				3DC2EB6D21A693B40073225F /* Example-Objc */,
+				3DC2EB8B21A69DA50073225F /* MyChat */,
 			);
 		};
 /* End PBXProject section */
@@ -134,7 +244,83 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3DC2EB8A21A69DA50073225F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F69E7B1174074CAC642DED5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-Objc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C339592ECD0BD78D78542B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Example-Objc/Pods-Example-Objc-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework",
+				"${PODS_ROOT}/QiscusCore/QiscusCore.framework",
+				"${PODS_ROOT}/QiscusCore/QiscusCore.framework.dSYM",
+				"${PODS_ROOT}/QiscusRealtime/QiscusRealtime.framework",
+				"${PODS_ROOT}/QiscusRealtime/QiscusRealtime.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/QiscusUI/QiscusUI.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SimpleImageViewer/SimpleImageViewer.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaMQTT.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QiscusCore.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/QiscusCore.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QiscusRealtime.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/QiscusRealtime.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QiscusUI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleImageViewer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-Objc/Pods-Example-Objc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3DC2EB6A21A693B40073225F /* Sources */ = {
@@ -147,7 +333,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3DC2EB8821A69DA50073225F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DC2EB9221A69DA50073225F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DC2EB8B21A69DA50073225F /* MyChat */;
+			targetProxy = 3DC2EB9121A69DA50073225F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3DC2EB7721A693B40073225F /* Main.storyboard */ = {
@@ -283,6 +484,7 @@
 		};
 		3DC2EB8521A693BA0073225F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06710A2DF43396F7993CA473 /* Pods-Example-Objc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +502,7 @@
 		};
 		3DC2EB8621A693BA0073225F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A9C7AB7DD6103724F977619 /* Pods-Example-Objc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,6 +515,66 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qiscusdev..Example-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3DC2EB9521A69DA50073225F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QG8KA4P8TE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MyChat/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiscusdev..MyChat;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3DC2EB9621A69DA50073225F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QG8KA4P8TE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MyChat/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiscusdev..MyChat;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -332,6 +595,15 @@
 			buildConfigurations = (
 				3DC2EB8521A693BA0073225F /* Debug */,
 				3DC2EB8621A693BA0073225F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DC2EB9721A69DA50073225F /* Build configuration list for PBXNativeTarget "MyChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DC2EB9521A69DA50073225F /* Debug */,
+				3DC2EB9621A69DA50073225F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
