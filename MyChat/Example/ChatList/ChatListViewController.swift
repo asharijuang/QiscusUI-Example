@@ -55,11 +55,7 @@ class ChatListViewController: UIChatListViewController {
     
     @objc func logout() {
         QiscusCore.logout { (error) in
-            let local = UserDefaults.standard
-            local.removeObject(forKey: "AppID")
-            local.synchronize()
-            let app = UIApplication.shared.delegate as! AppDelegate
-            app.auth()
+            
         }
     }
     

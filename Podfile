@@ -6,5 +6,6 @@ target 'Example-Objc' do
   use_frameworks!
 
   # Pods for Example
-  pod 'MyChat', :path => '.' 
+  pod 'MyChat', :path => '.'
+  pod 'SimpleImageViewer', :git => 'https://github.com/aFrogleap/SimpleImageViewer'
 end
