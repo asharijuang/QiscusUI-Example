@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BFF667676A463B3AD0E7598 /* Pods_Example_Objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A3E6EEC2939AFE86203A9A /* Pods_Example_Objc.framework */; };
 		3DC2EB7321A693B40073225F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC2EB7221A693B40073225F /* AppDelegate.m */; };
 		3DC2EB7621A693B40073225F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC2EB7521A693B40073225F /* ViewController.m */; };
 		3DC2EB7921A693B40073225F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC2EB7721A693B40073225F /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2768530A01569576DB157897 /* Pods-Example-Objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-Objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example-Objc/Pods-Example-Objc.debug.xcconfig"; sourceTree = "<group>"; };
 		3DC2EB6E21A693B40073225F /* Example-Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-Objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC2EB7121A693B40073225F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3DC2EB7221A693B40073225F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +28,7 @@
 		3DC2EB7D21A693BA0073225F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DC2EB7F21A693BA0073225F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DC2EB8021A693BA0073225F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		67598618BEFAAB674D86AAA5 /* Pods-Example-Objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-Objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-Objc/Pods-Example-Objc.release.xcconfig"; sourceTree = "<group>"; };
 		762E72F9CCC578E8265A5ABE /* Pods-MyChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyChat/Pods-MyChat.release.xcconfig"; sourceTree = "<group>"; };
 		8BFEE4C93D3826ECA631EAA7 /* Pods_MyChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A3E6EEC2939AFE86203A9A /* Pods_Example_Objc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_Objc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BFF667676A463B3AD0E7598 /* Pods_Example_Objc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +95,8 @@
 			children = (
 				A90EF734988369088737013E /* Pods-MyChat.debug.xcconfig */,
 				762E72F9CCC578E8265A5ABE /* Pods-MyChat.release.xcconfig */,
+				2768530A01569576DB157897 /* Pods-Example-Objc.debug.xcconfig */,
+				67598618BEFAAB674D86AAA5 /* Pods-Example-Objc.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -102,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DC2EB8421A693BA0073225F /* Build configuration list for PBXNativeTarget "Example-Objc" */;
 			buildPhases = (
+				878B74259C0AEA516E696CD8 /* [CP] Check Pods Manifest.lock */,
 				3DC2EB6A21A693B40073225F /* Sources */,
 				3DC2EB6B21A693B40073225F /* Frameworks */,
 				3DC2EB6C21A693B40073225F /* Resources */,
+				DB2704D3078AD6E0109D032F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +167,73 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		878B74259C0AEA516E696CD8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-Objc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB2704D3078AD6E0109D032F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Example-Objc/Pods-Example-Objc-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework",
+				"${BUILT_PRODUCTS_DIR}/MyChat/MyChat.framework",
+				"${PODS_ROOT}/QiscusCore/QiscusCore.framework",
+				"${PODS_ROOT}/QiscusCore/QiscusCore.framework.dSYM",
+				"${PODS_ROOT}/QiscusRealtime/QiscusRealtime.framework",
+				"${PODS_ROOT}/QiscusRealtime/QiscusRealtime.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/QiscusUI/QiscusUI.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaMQTT.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MyChat.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QiscusCore.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/QiscusCore.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QiscusRealtime.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/QiscusRealtime.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QiscusUI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-Objc/Pods-Example-Objc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3DC2EB6A21A693B40073225F /* Sources */ = {
@@ -307,6 +382,7 @@
 		};
 		3DC2EB8521A693BA0073225F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2768530A01569576DB157897 /* Pods-Example-Objc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -325,6 +401,7 @@
 		};
 		3DC2EB8621A693BA0073225F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67598618BEFAAB674D86AAA5 /* Pods-Example-Objc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
