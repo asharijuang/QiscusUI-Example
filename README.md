@@ -1,10 +1,8 @@
-# QiscusUI-Example
-Example project to teach you how to use Qiscus UI Library.
+# MyChat - local cocoapod based on QiscusUI-Example
+Example how to create local pod base on Example project [QiscusUI-Example](https://github.com/qiscus/QiscusUI-Example).
 Qiscus UI Example compatible with Qiscus SDK iOS 2.8.x , android and web.
 
 ## Requirements
-
-Please user branch [Swift 4.1](https://github.com/qiscus/QiscusUI-Example/tree/swift4.1) if you'r using xcode 9.4
 
 - iOS 10.0+
 - Xcode 10+
@@ -17,11 +15,6 @@ Please user branch [Swift 4.1](https://github.com/qiscus/QiscusUI-Example/tree/s
 * SwiftyJSON
 * SimpleImageViewer
 * SDWebImage
-
-## lesson
-
-* How to use custom chat input
-* How to get QiscusCore Event
 
 ## Security Disclosure
 
