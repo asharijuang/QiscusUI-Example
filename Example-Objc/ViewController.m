@@ -21,8 +21,9 @@
 }
     
 - (IBAction)clickLogin:(id)sender {
-    MyChat.shared
+    NSString *target = @"hello";
+    UIViewController *vc = [[MyChat shared] chatWithUser:target];
+    [self.navigationController pushViewController:vc animated:YES];
 }
     
-
 @end

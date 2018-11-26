@@ -7,12 +7,23 @@
 
 import Foundation
 
-public class MyChat {
-    public static let shared : MyChat = MyChat()
+@objc public class MyChat : NSObject {
+    @objc public static let shared : MyChat = MyChat()
+    class var bundle:Bundle{
+        get{
+            let podBundle = Bundle(for: MyChat.self)
+            if let bundleURL = podBundle.url(forResource: "MyChat", withExtension: "bundle") {
+                return Bundle(url: bundleURL)!
+            }else{
+                return podBundle
+            }
+        }
+    }
     
+    @objc public func chatWith(user: String) -> UIViewController {
+        let target      = ChatViewController()
+        target.chatUser = user
     
-    public func chatWith(user: String) -> UIViewController {
-        
-        return ChatViewController()
+        return target
     }
 }

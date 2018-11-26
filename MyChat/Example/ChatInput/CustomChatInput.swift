@@ -41,7 +41,7 @@ class CustomChatInput: UIChatInput {
     var colorName : UIColor = UIColor.black
     
     override func commonInit(nib: UINib) {
-        let nib = UINib(nibName: "CustomChatInput", bundle: nil)
+        let nib = UINib(nibName: "CustomChatInput", bundle: MyChat.bundle)
         super.commonInit(nib: nib)
         textView.delegate = self
         textView.text = TextConfiguration.sharedInstance.textPlaceholder
