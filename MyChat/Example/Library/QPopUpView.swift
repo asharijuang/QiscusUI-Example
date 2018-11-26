@@ -44,7 +44,7 @@ public class QPopUpView: UIViewController {
     @IBOutlet weak var textViewHeight: NSLayoutConstraint!
     
     fileprivate init() {
-        super.init(nibName: "QPopUpView", bundle:nil)
+        super.init(nibName: "QPopUpView", bundle: MyChat.bundle)
     }
     
     required public init?(coder aDecoder: NSCoder) {

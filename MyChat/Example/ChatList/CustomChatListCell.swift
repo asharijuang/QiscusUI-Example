@@ -15,7 +15,7 @@ import SDWebImage
 
 class CustomChatListCell: BaseChatListCell {
     static var nib:UINib {
-        return UINib(nibName: identifier, bundle:nil)
+        return UINib(nibName: identifier, bundle: MyChat.bundle)
     }
     
     static var identifier: String {

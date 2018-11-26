@@ -70,37 +70,37 @@ class QTextRightCell: QUIBaseChatCell {
         
         switch message.status {
         case .deleted:
-            ivStatus.image = UIImage(named: "ic_deleted")?.withRenderingMode(.alwaysTemplate)
+            ivStatus.image = UIImage(named: "ic_deleted", in: MyChat.bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
             break
         case .sending, .pending:
             lbTime.textColor = ColorConfiguration.rightBaloonTextColor
             ivStatus.tintColor = ColorConfiguration.rightBaloonTextColor
             lbTime.text = TextConfiguration.sharedInstance.sendingText
-            ivStatus.image = UIImage(named: "ic_info_time")?.withRenderingMode(.alwaysTemplate)
+            ivStatus.image = UIImage(named: "ic_info_time", in: MyChat.bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
             break
         case .sent:
             lbTime.textColor = ColorConfiguration.rightBaloonTextColor
             ivStatus.tintColor = ColorConfiguration.rightBaloonTextColor
-            ivStatus.image = UIImage(named: "ic_sending")?.withRenderingMode(.alwaysTemplate)
+            ivStatus.image = UIImage(named: "ic_sending", in: MyChat.bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
             break
         case .delivered:
             lbTime.textColor = ColorConfiguration.rightBaloonTextColor
             ivStatus.tintColor = ColorConfiguration.rightBaloonTextColor
-            ivStatus.image = UIImage(named: "ic_read")?.withRenderingMode(.alwaysTemplate)
+            ivStatus.image = UIImage(named: "ic_read", in: MyChat.bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
             break
         case .read:
             lbTime.textColor = ColorConfiguration.rightBaloonTextColor
             ivStatus.tintColor = ColorConfiguration.readMessageColor
-            ivStatus.image = UIImage(named: "ic_read")?.withRenderingMode(.alwaysTemplate)
+            ivStatus.image = UIImage(named: "ic_read", in: MyChat.bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
             break
         case . failed:
             lbTime.textColor = ColorConfiguration.failToSendColor
             lbTime.text = TextConfiguration.sharedInstance.failedText
-            ivStatus.image = UIImage(named: "ic_warning")?.withRenderingMode(.alwaysTemplate)
+            ivStatus.image = UIImage(named: "ic_warning", in: MyChat.bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
             ivStatus.tintColor = ColorConfiguration.failToSendColor
             break
         case .deleting:
-            ivStatus.image = UIImage(named: "ic_deleted")?.withRenderingMode(.alwaysTemplate)
+            ivStatus.image = UIImage(named: "ic_deleted", in: MyChat.bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
             break
         }
     }

@@ -51,7 +51,7 @@ class QCarouselCell: QUIBaseChatCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.carouselView.register(UINib(nibName: "QCarouselCardCell",bundle:nil), forCellWithReuseIdentifier: "cellCardCarousel")
+        self.carouselView.register(UINib(nibName: "QCarouselCardCell",bundle: MyChat.bundle), forCellWithReuseIdentifier: "cellCardCarousel")
         carouselView.delegate = self
         carouselView.dataSource = self
         carouselView.clipsToBounds = true

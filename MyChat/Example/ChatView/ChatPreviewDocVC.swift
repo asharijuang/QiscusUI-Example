@@ -147,7 +147,7 @@ open class ChatPreviewDocVC: UIViewController, UIWebViewDelegate, WKNavigationDe
         backLabel.textColor = ChatViewController().currentNavbarTint
         backLabel.font = UIFont.systemFont(ofSize: 12)
         
-        let image = UIImage(named: "ic_back")?.withRenderingMode(.alwaysTemplate)
+        let image = UIImage(named: "ic_back", in: MyChat.bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
         backIcon.image = image
         backIcon.tintColor = ChatViewController().currentNavbarTint
         

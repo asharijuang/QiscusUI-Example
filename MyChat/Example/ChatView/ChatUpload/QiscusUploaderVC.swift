@@ -69,7 +69,7 @@ class QiscusUploaderVC: UIViewController, UIScrollViewDelegate,UITextViewDelegat
         self.scrollView.delegate = self
         self.scrollView.minimumZoomScale = 1.0
         self.scrollView.maximumZoomScale = 4.0
-        let sendImage = UIImage(named: "send")?.withRenderingMode(.alwaysTemplate)
+        let sendImage = UIImage(named: "send", in: MyChat.bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
         self.sendButton.setImage(sendImage, for: .normal)
         self.sendButton.tintColor = ColorConfiguration.topColor
         self.cancelButton.setTitle("Cancel", for: .normal)
@@ -78,7 +78,7 @@ class QiscusUploaderVC: UIViewController, UIScrollViewDelegate,UITextViewDelegat
         
         imageCollection.dataSource = self
         imageCollection.delegate = self
-        imageCollection.register(UINib(nibName: "MultipleImageCell", bundle:nil), forCellWithReuseIdentifier: "MultipleImageCell")
+        imageCollection.register(UINib(nibName: "MultipleImageCell", bundle: MyChat.bundle), forCellWithReuseIdentifier: "MultipleImageCell")
         imageCollection.backgroundColor = UIColor.clear
         imageCollection.isHidden = true
         imageCollection.allowsSelection = true

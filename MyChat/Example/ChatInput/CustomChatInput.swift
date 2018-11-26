@@ -69,13 +69,13 @@ class CustomChatInput: UIChatInput {
                 let payload = JSON(data.payload)
                 let address = payload["address"].stringValue
                 self.lbReplyPreview.text = address
-                self.iconReplyPreview.image = UIImage(named: "map_ico")
-                self.ivReplyPreview.image = UIImage(named: "map_ico")
+                self.iconReplyPreview.image = UIImage(named: "map_ico", in: MyChat.bundle, compatibleWith: nil)
+                self.ivReplyPreview.image = UIImage(named: "map_ico", in: MyChat.bundle, compatibleWith: nil)
                 self.iconReplyPreviewWidhtCons.constant = 0
             }else if data.type == "contact_person"{
                 let payloadJSON = JSON(data.payload)
                 self.lbReplyPreview.text = payloadJSON["name"].string ??  payloadJSON["value"].string ?? ""
-                self.iconReplyPreview.image = UIImage(named: "contact")
+                self.iconReplyPreview.image = UIImage(named: "contact", in: MyChat.bundle, compatibleWith: nil)
                 self.ivReplyPreviewWidth.constant = 0
             }else if data.type == "file_attachment"{
                 let replyType = ChatViewController().getType(message: data)
@@ -90,29 +90,29 @@ class CustomChatInput: UIChatInput {
                         ivReplyPreview.sd_setImage(with: URL(string: url)!)
                     }
                     
-                    self.iconReplyPreview.image = UIImage(named: "ic_image")
+                    self.iconReplyPreview.image = UIImage(named: "ic_image", in: MyChat.bundle, compatibleWith: nil)
                     
                 case .video:
                     var filename = data.fileName(text: data.message)
                     self.lbReplyPreview.text = filename
-                    self.iconReplyPreview.image = UIImage(named: "ic_videocam")?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+                    self.iconReplyPreview.image = UIImage(named: "ic_videocam", in: MyChat.bundle, compatibleWith: nil)?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
                     self.iconReplyPreview.tintColor = UIColor.lightGray
                     self.ivReplyPreviewWidth.constant = 0
                 case .audio:
                     var filename = data.fileName(text: data.message)
                     self.lbReplyPreview.text = filename
-                    self.iconReplyPreview.image = UIImage(named: "ar_record")?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+                    self.iconReplyPreview.image = UIImage(named: "ar_record", in: MyChat.bundle, compatibleWith: nil)?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
                     self.iconReplyPreview.tintColor = UIColor.lightGray
                     self.ivReplyPreviewWidth.constant = 0
                 case .document:
                     var filename = data.fileName(text: data.message)
                     self.lbReplyPreview.text = filename
-                    self.iconReplyPreview.image = UIImage(named: "ic_file")
+                    self.iconReplyPreview.image = UIImage(named: "ic_file", in: MyChat.bundle, compatibleWith: nil)
                     self.ivReplyPreviewWidth.constant = 0
                 case .file:
                     var filename = data.fileName(text: data.message)
                     self.lbReplyPreview.text = filename
-                    self.iconReplyPreview.image = UIImage(named: "ic_file")
+                    self.iconReplyPreview.image = UIImage(named: "ic_file", in: MyChat.bundle, compatibleWith: nil)
                     self.ivReplyPreviewWidth.constant = 0
                 default:
                     self.lbReplyPreview.text = data.message

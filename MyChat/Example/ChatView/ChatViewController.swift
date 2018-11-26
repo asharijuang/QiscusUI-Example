@@ -90,6 +90,16 @@ public class ChatViewController: UIChatViewController {
                     print("error load room \(String(describing: error.message))")
                 }
             }
+            if let user = chatUser  {
+                // loading
+                //self.showLoading()
+                QiscusCore.shared.getRoom(withUser: user, onSuccess: { (roomModel, _) in
+                    self.room = roomModel
+                    self.setupNavigationTitle()
+                }) { (error) in
+                    print("error load room \(String(describing: error.message))")
+                }
+            }
         }
         
         self.setupUI()
@@ -205,23 +215,23 @@ public class ChatViewController: UIChatViewController {
     }
     
     func registerCell() {
-        self.registerClass(nib: UINib(nibName: "QTextRightCell", bundle:nil), forMessageCellWithReuseIdentifier: "qTextRightCell")
-        self.registerClass(nib: UINib(nibName: "QTextLeftCell", bundle:nil), forMessageCellWithReuseIdentifier: "qTextLeftCell")
-        self.registerClass(nib: UINib(nibName: "QImageLeftCell", bundle:nil), forMessageCellWithReuseIdentifier: "qImageLeftCell")
-        self.registerClass(nib: UINib(nibName: "QImageRightCell", bundle:nil), forMessageCellWithReuseIdentifier: "qImageRightCell")
-        self.registerClass(nib: UINib(nibName: "QDocumentLeftCell", bundle:nil), forMessageCellWithReuseIdentifier: "qDocumentLeftCell")
-        self.registerClass(nib: UINib(nibName: "QDocumentRightCell", bundle:nil), forMessageCellWithReuseIdentifier: "qDocumentRightCell")
-        self.registerClass(nib: UINib(nibName: "QSystemCell", bundle:nil), forMessageCellWithReuseIdentifier: "qSystemCell")
-        self.registerClass(nib: UINib(nibName: "QReplyLeftCell", bundle:nil), forMessageCellWithReuseIdentifier: "qReplyLeftCell")
-        self.registerClass(nib: UINib(nibName: "QReplyRightCell", bundle:nil), forMessageCellWithReuseIdentifier: "qReplyRightCell")
-        self.registerClass(nib: UINib(nibName: "QLocationLeftCell", bundle:nil), forMessageCellWithReuseIdentifier: "qLocationLeftCell")
-        self.registerClass(nib: UINib(nibName: "QLocationRightCell", bundle:nil), forMessageCellWithReuseIdentifier: "qLocationRightCell")
-        self.registerClass(nib: UINib(nibName: "QContactLeftCell", bundle:nil), forMessageCellWithReuseIdentifier: "qContactLeftCell")
-        self.registerClass(nib: UINib(nibName: "QContactRightCell", bundle:nil), forMessageCellWithReuseIdentifier: "qContactRightCell")
-        self.registerClass(nib: UINib(nibName: "QAudioLeftCell", bundle:nil), forMessageCellWithReuseIdentifier: "qAudioLeftCell")
-        self.registerClass(nib: UINib(nibName: "QAudioRightCell", bundle:nil), forMessageCellWithReuseIdentifier: "qAudioRightCell")
-        self.registerClass(nib: UINib(nibName: "QPostbackLeftCell", bundle:nil), forMessageCellWithReuseIdentifier: "postBack")
-        self.registerClass(nib: UINib(nibName: "QCarouselCell", bundle:nil), forMessageCellWithReuseIdentifier: "qCarouselCell")
+        self.registerClass(nib: UINib(nibName: "QTextRightCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "qTextRightCell")
+        self.registerClass(nib: UINib(nibName: "QTextLeftCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "qTextLeftCell")
+        self.registerClass(nib: UINib(nibName: "QImageLeftCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "qImageLeftCell")
+        self.registerClass(nib: UINib(nibName: "QImageRightCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "qImageRightCell")
+        self.registerClass(nib: UINib(nibName: "QDocumentLeftCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "qDocumentLeftCell")
+        self.registerClass(nib: UINib(nibName: "QDocumentRightCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "qDocumentRightCell")
+        self.registerClass(nib: UINib(nibName: "QSystemCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "qSystemCell")
+        self.registerClass(nib: UINib(nibName: "QReplyLeftCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "qReplyLeftCell")
+        self.registerClass(nib: UINib(nibName: "QReplyRightCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "qReplyRightCell")
+        self.registerClass(nib: UINib(nibName: "QLocationLeftCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "qLocationLeftCell")
+        self.registerClass(nib: UINib(nibName: "QLocationRightCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "qLocationRightCell")
+        self.registerClass(nib: UINib(nibName: "QContactLeftCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "qContactLeftCell")
+        self.registerClass(nib: UINib(nibName: "QContactRightCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "qContactRightCell")
+        self.registerClass(nib: UINib(nibName: "QAudioLeftCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "qAudioLeftCell")
+        self.registerClass(nib: UINib(nibName: "QAudioRightCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "qAudioRightCell")
+        self.registerClass(nib: UINib(nibName: "QPostbackLeftCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "postBack")
+        self.registerClass(nib: UINib(nibName: "QCarouselCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "qCarouselCell")
         
     }
     
@@ -571,9 +581,9 @@ extension ChatViewController : UIChatView {
     }
     
     public func uiChat(input InViewController: UIChatViewController) -> UIChatInput? {
-        let sendImage = UIImage(named: "send")?.withRenderingMode(.alwaysTemplate)
-        let attachmentImage = UIImage(named: "share_attachment")?.withRenderingMode(.alwaysTemplate)
-        let cancel = UIImage(named: "ar_cancel")?.withRenderingMode(.alwaysTemplate)
+        let sendImage = UIImage(named: "send", in: MyChat.bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
+        let attachmentImage = UIImage(named: "share_attachment", in: MyChat.bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
+        let cancel = UIImage(named: "ar_cancel", in: MyChat.bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
         inputBar.sendButton.setImage(sendImage, for: .normal)
         inputBar.attachButton.setImage(attachmentImage, for: .normal)
         inputBar.cancelReplyPreviewButton.setImage(cancel, for: .normal)
@@ -953,7 +963,7 @@ extension ChatViewController : CustomChatInputDelegate {
                     }
                     )
                 }else{
-//                    let uploader = QiscusUploaderVC(nibName: "QiscusUploaderVC", bundle:nil)
+//                    let uploader = QiscusUploaderVC(nibName: "QiscusUploaderVC", bundle: MyChat.bundle)
 //                    uploader.chatView = self
 //                    uploader.data = data
 //                    uploader.fileName = fileName
@@ -1180,7 +1190,7 @@ extension ChatViewController : UIImagePickerControllerDelegate, UINavigationCont
                 
                 dismiss(animated:true, completion: nil)
                 
-                let uploader = QiscusUploaderVC(nibName: "QiscusUploaderVC", bundle:nil)
+                let uploader = QiscusUploaderVC(nibName: "QiscusUploaderVC", bundle: MyChat.bundle)
                 uploader.chatView = self
                 uploader.data = data
                 uploader.fileName = imageName
