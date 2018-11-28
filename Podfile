@@ -7,6 +7,6 @@ target 'Example-Objc' do
 
   # Pods for Example
   pod 'MyChat', :path => '.'
-  pod 'QiscusCore', :path => '../QiscusCore/'
+#  pod 'QiscusCore', :path => '../QiscusCore/'
   pod 'SimpleImageViewer', :git => 'https://github.com/aFrogleap/SimpleImageViewer'
 end
