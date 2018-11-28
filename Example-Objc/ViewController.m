@@ -27,7 +27,8 @@
 }
     
 - (IBAction)clickLogin:(id)sender {
-    [[MyChat shared] setupWithAppId:@"chatbot-h3epiudknsanf" userEmail:@"testerQiscus" userKey:@"qwerty" username:@"Tester Qiscus" avatarURL:@"https://res.cloudinary.com/qiscus/image/upload/v1492675291/kiwari-prod_user_id_169/jjgbgrln7u9sdc0pw8s3.jpg" extras:nil];
+    NSString *target = @"QiscusTester1";
+    [[MyChat shared] setupWithAppId:@"chatbot-h3epiudknsanf" userEmail:target userKey:target username:target avatarURL:@"https://res.cloudinary.com/qiscus/image/upload/v1492675291/kiwari-prod_user_id_169/jjgbgrln7u9sdc0pw8s3.jpg" extras:nil];
 }
     
 - (IBAction)clickChat:(id)sender {
@@ -35,9 +36,20 @@
     UIViewController *vc = [[MyChat shared] chatWithUser:target];
     [self.navigationController pushViewController:vc animated:YES];
 }
-    
+- (IBAction)sayHi:(id)sender {
+    // say hi to indira
+    NSString *target = @"myim3bot@indosatooredoo.com";
+    NSDictionary *extras = @{@"hidden": @TRUE};
+    [[MyChat shared] postMessageWithUser:target message:@"Hi" extras:extras];
+}
+
 - (IBAction)clickLogout:(id)sender {
-    
+    [[MyChat shared] logout];
+}
+
+- (IBAction)clearMessage:(id)sender {
+    NSString *target = @"myim3bot@indosatooredoo.com";
+    [[MyChat shared] clearMessageWithUser:target];
 }
     
 @end

@@ -36,6 +36,7 @@ public class ChatViewController: UIChatViewController {
     let locationManager = CLLocationManager()
     var presentingLoading = false
     var inputBar = CustomChatInput()
+    var chatNavigation = CustomChatNavigation()
     
     var latestNavbarTint = UINavigationBar.appearance().tintColor
     internal var currentNavbarTint = UINavigationBar.appearance().tintColor
@@ -596,8 +597,9 @@ extension ChatViewController : UIChatView {
         return inputBar
     }
     
-    public func uiChat(navigationView inViewConroller: UIChatViewController) -> UIChatTitleView? {
-        return nil
+    public func uiChat(navigationView inViewConroller: UIChatViewController) -> UIChatNavigation? {
+        // return nil if use default
+        return chatNavigation
     }
 }
 

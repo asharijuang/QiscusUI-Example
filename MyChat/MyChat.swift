@@ -22,6 +22,7 @@ import QiscusCore
     }
     
     @objc public static func isLogined() -> Bool {
+        QiscusCore.enableDebugPrint = true
         return QiscusCore.isLogined
     }
     
@@ -56,7 +57,7 @@ import QiscusCore
     ///   - roomID: room id
     ///   - message: message text
     ///   - extras: extra data
-    @objc public func postMessage(roomID: String, message: String, extras: String?) {
+    @objc public func postMessage(roomID: String, message: String, extras: [String:Any]?) {
         let comment         = CommentModel()
         comment.message     = message
         comment.extras      = extras
@@ -69,6 +70,15 @@ import QiscusCore
         }
     }
     
+    @objc public func postMessage(user: String, message: String, extras: [String:Any]?) {
+        QiscusCore.shared.getRoom(withUser: user, onSuccess: { (room, comments) in
+            // 
+            MyChat.shared.postMessage(roomID: room.id, message: message, extras: extras)
+        }) { (error) in
+            //
+        }
+    }
+    
     @objc public func clearMessage(roomID: String) {
         QiscusCore.shared.deleteAllMessage(roomID: [roomID]) { (error) in
             if let message = error?.message {
@@ -76,6 +86,14 @@ import QiscusCore
             }else {
                 // success
             }
+        }
+    }
+    
+    @objc public func clearMessage(withUser user: String) {
+        QiscusCore.shared.getRoom(withUser: user, onSuccess: { (room, comments) in
+            MyChat.shared.clearMessage(roomID: room.id)
+        }) { (error) in
+            //
         }
     }
     
