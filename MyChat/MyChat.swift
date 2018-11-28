@@ -21,6 +21,10 @@ import QiscusCore
         }
     }
     
+    @objc public static func isLogined() -> Bool {
+        return QiscusCore.isLogined
+    }
+    
     @objc public func setup(withAppId appId:String, userEmail:String, userKey:String, username:String, avatarURL:String? = nil, extras:[String: Any]? = nil) {
         QiscusCore.setup(WithAppID: appId)
         let url = URL(string: avatarURL ?? "http://")
@@ -30,7 +34,8 @@ import QiscusCore
         }) { (error) in
             // when login error
         }
-        
+        // enable debug log
+        QiscusCore.enableDebugPrint = true
     }
     
     /// Chat with qiscus user id

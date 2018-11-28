@@ -34,15 +34,29 @@
                                     <action selector="clickLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="33Q-Ul-Ifu"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J35-cc-jsy">
+                                <rect key="frame" x="16" y="84" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="J35-cc-jsy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="15n-EN-Aat"/>
+                            <constraint firstItem="J35-cc-jsy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="CGV-0b-vgV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J35-cc-jsy" secondAttribute="trailing" constant="16" id="sg6-PI-RIn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="nsk-JY-1jI"/>
+                    <connections>
+                        <outlet property="labelWelcome" destination="J35-cc-jsy" id="fMV-ae-C44"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044" y="-601"/>
+            <point key="canvasLocation" x="1044" y="-601.34932533733138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="v7v-2D-GJ0">

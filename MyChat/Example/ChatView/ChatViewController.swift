@@ -596,6 +596,9 @@ extension ChatViewController : UIChatView {
         return inputBar
     }
     
+    public func uiChat(navigationView inViewConroller: UIChatViewController) -> UIChatTitleView? {
+        return nil
+    }
 }
 
 extension ChatViewController: CNContactViewControllerDelegate{
