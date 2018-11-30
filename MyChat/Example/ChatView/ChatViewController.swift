@@ -233,7 +233,7 @@ public class ChatViewController: UIChatViewController {
         self.registerClass(nib: UINib(nibName: "QAudioRightCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "qAudioRightCell")
         self.registerClass(nib: UINib(nibName: "QPostbackLeftCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "postBack")
         self.registerClass(nib: UINib(nibName: "QCarouselCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "qCarouselCell")
-        
+        self.registerClass(nib: UINib(nibName: "EmptyCell", bundle: MyChat.bundle), forMessageCellWithReuseIdentifier: "EmptyCell")
     }
     
     private func setupNavigationTitle(){
@@ -365,6 +365,16 @@ extension ChatViewController : UIChatView {
         }
         
         let menuConfig = enableMenuConfig()
+        
+        // hidden message
+        if let extras = message.extras {
+            print("extras: \(extras)")
+            if let extra = extras["hidden"] as? Bool, extra {
+                let cell =  self.reusableCell(withIdentifier: "EmptyCell", for: message) as! EmptyCell
+                return cell
+            }
+
+        }
         
         if message.type == "text" {
             if (message.isMyComment() == true){

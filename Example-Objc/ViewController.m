@@ -39,7 +39,7 @@
 - (IBAction)sayHi:(id)sender {
     // say hi to indira
     NSString *target = @"myim3bot@indosatooredoo.com";
-    NSDictionary *extras = @{@"hidden": @TRUE};
+    NSDictionary *extras = @{@"hidden": @YES};
     [[MyChat shared] postMessageWithUser:target message:@"Hi" extras:extras];
 }
 
