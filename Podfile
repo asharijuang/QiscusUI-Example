@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '10.0'
+platform :ios, '9'
 
 target 'Example-Objc' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -7,6 +7,12 @@ target 'Example-Objc' do
 
   # Pods for Example
   pod 'MyChat', :path => '.'
-#  pod 'QiscusCore', :path => '../QiscusCore/'
+  #  pod 'QiscusCore', :path => '../QiscusCore/'
+#  pod 'QiscusCore', :path => '../../SDKsQiscus/qiscus-chat-sdk-core/'
+#  pod 'QiscusUI', :path => '../../SDKsQiscus/qiscusui'
+#  pod 'QiscusRealtime', :path => '../../SDKsQiscus/mqttlib'
+  pod 'QiscusCore'
+  pod 'QiscusUI', :path => '../../SDKsQiscus/qiscusui'
+  pod 'QiscusRealtime', :path => '../../SDKsQiscus/mqttlib'
   pod 'SimpleImageViewer', :git => 'https://github.com/aFrogleap/SimpleImageViewer'
 end
