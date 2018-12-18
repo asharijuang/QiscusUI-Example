@@ -14,9 +14,9 @@ s.source_files  = "MyChat/**/*.{swift}"
 s.resource_bundles = {
     'MyChat' => ['MyChat/**/*.{xib,xcassets,imageset,png}']
 }
-s.platform      = :ios, "10.0"
+s.platform      = :ios, "9.0"
 
-s.dependency 'QiscusUI', '~> 0.2.1'
+s.dependency 'QiscusUI'
 s.dependency 'SDWebImage', '~> 4.4.2'
 s.dependency 'SwiftyJSON', '~> 4.2.0'
 s.dependency 'Alamofire', '~> 4.7.3'
