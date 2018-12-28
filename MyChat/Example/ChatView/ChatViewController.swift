@@ -1397,7 +1397,7 @@ extension ChatViewController : QUIBaseChatCellDelegate {
     }
     
     func didTap(delete comment: CommentModel) {
-        QiscusCore.shared.deleteMessage(uniqueIDs: [comment.uniqId], type: .forEveryone, onSuccess: { (commentsModel) in
+        QiscusCore.shared.deleteMessage(uniqueIDs: [comment.uniqId], onSuccess: { (commentsModel) in
             print("success delete comment for everyone")
         }) { (error) in
             print("failed delete comment for everyone")
@@ -1405,7 +1405,7 @@ extension ChatViewController : QUIBaseChatCellDelegate {
     }
     
     func didTap(deleteForMe comment: CommentModel) {
-        QiscusCore.shared.deleteMessage(uniqueIDs: [comment.uniqId], type: DeleteType.forMe, onSuccess: { (commentsModel) in
+        QiscusCore.shared.deleteMessage(uniqueIDs: [comment.uniqId], onSuccess: { (commentsModel) in
             print("success delete comment for me")
         }) { (error) in
             print("failed delete comment for me \(error.message)")
