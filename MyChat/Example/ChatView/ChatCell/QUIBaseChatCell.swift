@@ -66,7 +66,7 @@ extension QUIBaseChatCell {
         let share = UIMenuItem(title: "Share", action: #selector(share(_:)))
         let infoMessage = UIMenuItem(title: "Info", action: #selector(info(_:)))
         let delete = UIMenuItem(title: "Delete", action: #selector(deleteComment(_:)))
-        let deleteForMe = UIMenuItem(title: "Delete For Me", action: #selector(deleteCommentForMe(_:)))
+        //let deleteForMe = UIMenuItem(title: "Delete For Me", action: #selector(deleteCommentForMe(_:)))
         
         var menuItems: [UIMenuItem] = [UIMenuItem]()
         menuItems.append(reply)
@@ -74,7 +74,7 @@ extension QUIBaseChatCell {
         if(forward == true){
             menuItems.append(forwardMessage)
         }
-        menuItems.append(deleteForMe)
+        //menuItems.append(deleteForMe)
         
         if let myComment = self.comment?.isMyComment() {
             if(myComment){
