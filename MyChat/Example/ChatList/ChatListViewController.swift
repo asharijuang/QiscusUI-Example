@@ -72,6 +72,10 @@ class ChatListViewController: UIChatListViewController {
 }
 
 extension ChatListViewController: UIChatListViewDelegate {
+    func uiChatList(filterRooms room: [RoomModel]) -> [RoomModel] {
+        return room
+    }
+    
     func uiChatList(tableView: UITableView, cellForRoom room: RoomModel, atIndexPath indexpath: IndexPath) -> BaseChatListCell? {
 
         return tableView.dequeueReusableCell(withIdentifier: CustomChatListCell.identifier, for: indexpath) as? CustomChatListCell
