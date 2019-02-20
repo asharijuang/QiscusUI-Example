@@ -85,6 +85,7 @@ public class ChatViewController: UIChatViewController {
                 QiscusCore.shared.getRoom(withID: roomid, onSuccess: { (roomModel, _) in
                     //self.dismissLoading()
                     self.room = roomModel
+                    QiscusCore.shared.subscribeRooms(rooms: [roomModel])
                     self.setupNavigationTitle()
                 }) { (error) in
                     //self.dismissLoading()
@@ -96,6 +97,7 @@ public class ChatViewController: UIChatViewController {
                 //self.showLoading()
                 QiscusCore.shared.getRoom(withUser: user, onSuccess: { (roomModel, _) in
                     self.room = roomModel
+                    QiscusCore.shared.subscribeRooms(rooms: [roomModel])
                     self.setupNavigationTitle()
                 }) { (error) in
                     print("error load room \(String(describing: error.message))")

@@ -2,7 +2,7 @@ import UIKit
 
 class AssetsConfiguration: NSObject {
     
-    public var emptyChat:UIImage = UIImage(named: "empty-chat", in: MyChat.bundle, compatibleWith: nil)!.withRenderingMode(.alwaysTemplate)
+    public var emptyChat:UIImage? = UIImage(named: "empty_chat", in: MyChat.bundle, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
     
     // MARK: - Chat balloon
     static var leftBallonLast:UIImage? = UIImage(named: "text_balloon_last_l", in: MyChat.bundle, compatibleWith: nil)
